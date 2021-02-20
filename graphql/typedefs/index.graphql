@@ -1,0 +1,30 @@
+# Custom Scalars
+scalar Date
+
+type Query {
+  # Books
+  books: [Book]!
+  book(id: ID!): Book
+
+  # Author
+  authors: [Author]!
+  author(id: ID!): Author
+
+  # Publisher
+  publishers: [Publisher]!
+  publisher(id: ID!): Publisher
+}
+
+type Mutation {
+  # Books
+  createBook(book: BookCreateInput!): Book!
+  updateBook(id: ID!, book: BookUpdateInput!): Book!
+
+  # Authors
+  createAuthor(author: AuthorCreateInput!): Author!
+  updateAuthor(id: ID!, author: AuthorUpdateInput!): Author!
+
+  # Publishers
+  createPublisher(publisher: PublisherCreateInput!): Publisher!
+  updatePublisher(id: ID!, publisher: PublisherUpdateInput!): Publisher!
+}

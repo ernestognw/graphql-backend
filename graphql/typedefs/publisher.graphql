@@ -1,0 +1,19 @@
+# Types
+type Publisher implements Timestamps { 
+  id: ID!
+  name: String!
+  authors: [Author]
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input PublisherCreateInput {
+  name: String!
+}
+
+input PublisherUpdateInput {
+  name: String
+}

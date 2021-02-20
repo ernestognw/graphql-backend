@@ -1,0 +1,20 @@
+# Types
+type Book implements Timestamps { 
+  id: ID!
+  name: String!
+  author: Author!
+  
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input BookCreateInput {
+  name: String!
+  author: ID!
+}
+
+input BookUpdateInput {
+  name: String
+}

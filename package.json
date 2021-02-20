@@ -1,0 +1,22 @@
+{
+  "name": "graphql-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./index.js --exec babel-node"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/node": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^7.1.3",
+    "apollo-server-express": "^2.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0"
+  }
+}
