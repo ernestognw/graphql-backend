@@ -1,6 +1,10 @@
-import { authorQueries, authorMutations } from './author';
-import { bookQueries, bookMutations } from './book';
-import { publisherQueries, publisherMutations } from './publisher';
+import { authorQueries, authorMutations, authorFields } from './author';
+import { bookQueries, bookMutations, bookFields } from './book';
+import {
+  publisherQueries,
+  publisherMutations,
+  publisherFields,
+} from './publisher';
 
 const resolvers = {
   Query: {
@@ -13,6 +17,9 @@ const resolvers = {
     ...bookMutations,
     ...publisherMutations,
   },
+  ...authorFields,
+  ...bookFields,
+  ...publisherFields,
 };
 
 export default resolvers;
