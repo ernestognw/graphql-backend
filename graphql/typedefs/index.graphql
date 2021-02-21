@@ -3,15 +3,15 @@ scalar Date
 
 type Query {
   # Books
-  books: [Book]!
+  books(params: QueryParams): Books!
   book(id: ID!): Book
 
   # Author
-  authors: [Author]!
+  authors(params: QueryParams): Authors!
   author(id: ID!): Author
 
   # Publisher
-  publishers: [Publisher]!
+  publishers(params: QueryParams): Publishers!
   publisher(id: ID!): Publisher
 }
 

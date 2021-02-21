@@ -9,6 +9,11 @@ type Author implements Timestamps {
   updatedAt: Date!
 }
 
+type Authors {
+  info: Info!
+  results: [Author]!
+}
+
 # Inputs
 input AuthorCreateInput {
   name: String!
